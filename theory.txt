@@ -1,0 +1,28 @@
+1. https://markformelle.by/catalog/extra-sale/zhenshchinam/aksessuary/filter/color_for_filter-is-goluboy/evro_razmer-is-s/apply/
+фильтрует аксессуары по цвету(голубой) и по размеру(s)
+https://www.pexels.com/ru-ru/search/%D0%BB%D0%B8%D1%81%D1%82/?orientation=landscape&size=large
+ищет картинки листа на стоке горизонтальной ориентации и большого рзамера
+
+2. Get отправляет данные, в post отправляет и еще обрабатывает. Самое важное отличие, get запрос указывается в адрессной строке, поэтому не может исспользоваться для конфеденциальных данных, а также для передачи больших запросов.
+
+3. лучше использовать метод get(примеры даже указаны в п.1)
+
+4. для регистрации метод post
+
+5.  api_key выбирает "коненую точку" куда перейти, q ищет выбранный запрос условия, limit максимальное количество выводов, lang выбирает язык
+https://api.giphy.com/v1/gifs/search?api_key=Z1sKCFiC0VCEDS813El9lKG2TT4VhM9v&q=&limit=5&offset=0&rating=g&lang=en
+
+6. в панеле разработчика -> network -> headers
+
+7. по умолчанию пишется text/plain;charset=UTF-8, но если используем json, то application/json;charset=utf-8
+
+8. fetch('localhost/pets/add ', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json;charset=utf-8'
+  },
+  body: JSON.stringify(dog)
+});
+
+9. Промис это объект, который хранит состояние, у него может быть три значения, промис в режиме ожидания, решен и отклонен.
+К примеру, работика просит повышения. 1. Он не знает, когда его повысят и в режиме ожидания. 2. Его повысили, приняли запрос. 3. Его оставили на прежнем месте, отклонили запрос
